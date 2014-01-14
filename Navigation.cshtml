@@ -1,0 +1,12 @@
+﻿@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+              
+<ul>
+
+    @foreach (var page in Model.Content.Descendants("contentType"))
+    {
+        <li><a href="@page.Url">@page.Name</a></li>    
+    }
+
+</ul>
+ 
